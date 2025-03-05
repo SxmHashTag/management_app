@@ -26,6 +26,13 @@ export const getEvidenceById = (evidenceId: string) => api.get(`/evidence/${evid
 export const updateEvidence = (evidenceId: string, evidenceData: object) => api.put(`/evidence/${evidenceId}`, evidenceData);
 export const deleteEvidence = (evidenceId: string) => api.delete(`/evidence/${evidenceId}`);
 
+// Suspects
+export const getSuspects = () => api.get("/suspects");
+export const getSuspectById = (suspectId: string) => api.get(`/suspects/${suspectId}`);
+export const createSuspect = (suspectData: object) => api.post("/suspects", suspectData);
+export const updateSuspect = (suspectId: string, suspectData: object) => api.put(`/suspects/${suspectId}`, suspectData);
+export const deleteSuspect = (suspectId: string) => api.delete(`/suspects/${suspectId}`);
+
 // Reports
 export const generateReport = (caseId: string) => api.post("/reports", { caseId });
 
